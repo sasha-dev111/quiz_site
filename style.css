@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #181510;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #594416;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(217, 119, 6, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(250, 204, 21, 0.1) 0%, transparent 40%),
+        linear-gradient(135deg, #14120f, #241d13, #1f180e);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fef08a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.screen {
+    background: #201a12;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.badge {
+    display: inline-block;
+    background: #d97706;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.screen h2 {
+    font-size: 26px;
+    color: #fef08a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.screen p {
+    font-size: 16px;
+    color: #ca8a04;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#score-box {
+    font-size: 15px;
+    font-weight: 600;
+    background: #3b2f15;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.15);
+}
+
+#timer-box {
+    font-size: 15px;
+    font-weight: 700;
+    background: #b45309;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+}
+
+#question-text {
+    font-size: 20px;
+    color: #fef08a;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    text-align: left;
+    font-weight: 600;
+}
+
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.answer-btn {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fef08a;
+    background-color: #312612;
+    border: 2px solid rgba(234, 179, 8, 0.15);
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background-color: #4a391a;
+    border-color: #ca8a04;
+    transform: translateY(-2px);
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+}
+
+.answer-btn.correct {
+    background-color: #166534;
+    color: #fff;
+    border-color: #15803d;
+}
+
+.answer-btn.wrong {
+    background-color: #991b1b;
+    color: #fff;
+    border-color: #b91c1c;
+}
+
+.main-btn {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+    width: 100%;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(217, 119, 6, 0.4);
+}
+
+.difficulty-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.diff-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ca8a04;
+    background-color: #312612;
+    border: 2px solid rgba(234, 179, 8, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.diff-btn:hover {
+    background-color: #4a391a;
+    color: #fef08a;
+    border-color: #ca8a04;
+}
+
+.diff-btn.active {
+    color: #ffffff;
+    background-color: #10b981;
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
