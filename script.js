@@ -216,5 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     startBtn.addEventListener('click', startGame);
-    restartBtn.addEventListener('click', startGame);
+    
+    
+    restartBtn.addEventListener('click', () => {
+        changeScreen(startScreen);
+    });
 });
